@@ -1,0 +1,62 @@
+/*
+List of background image URLs
+
+https://i.imgur.com/GbXWXJL.jpeg
+https://i.imgur.com/3n59TdD.jpeg
+https://i.imgur.com/zCdQocq.jpeg
+https://i.imgur.com/BCJB2if.jpeg - rotated 180 degrees of last one
+https://i.imgur.com/tgJCm73.jpeg
+https://i.imgur.com/XJUIIzH.jpeg
+https://i.imgur.com/egHWdmn.jpeg
+https://i.imgur.com/8qT1VWl.jpeg
+*/
+
+
+.theme-dark .workspace{
+    backdrop-filter: hue-rotate(320deg) saturate(.3) brightness(.3) blur(12px);
+    background-color: transparent;
+}
+.horizontal-main-container {
+    background-image: url("https://i.imgur.com/egHWdmn.jpeg");
+    background-size: cover;
+}
+
+.is-mobile {
+    background-image: initial;
+    background-color: initial;
+    backdrop-filter: initial;
+}
+body:not(.is-mobile) {
+    --background-primary: transparent;
+    --background-secondary: transparent;
+    --divider-width: 0px;
+}
+.menu, 
+.prompt, 
+.modal, 
+.suggestion-container, 
+.status-bar, 
+.workspace-tab-header.is-active, 
+.suggestion-container.mod-search-suggestion .suggestion,
+.canvas-menu,
+.projects--popover {
+    background-color: rgba(30, 30, 30, 1);
+}
+
+.cm-sizer, .markdown-preview-sizer {
+    margin-top: 1.2rem;
+    border-radius: 15px;
+    padding: 30px;
+    background-color: rgb(30, 30, 30);
+}
+
+.is-mobile .cm-sizer, .is-mobile .markdown-preview-sizer {
+    margin-top: initial;
+    border-radius: initial;
+    padding: initial;
+    background-color: initial;
+}
+
+body:not(.is-mobile) .workspace-leaf-content[data-mode="source"] .inline-title {
+    margin-top: 0.901rem;
+}

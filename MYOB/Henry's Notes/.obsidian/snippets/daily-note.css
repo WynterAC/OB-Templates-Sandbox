@@ -1,0 +1,197 @@
+.daily-note {
+    --metadata-display-editing: none
+}
+
+/* .daily-note .image-embed img:first-of-type {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+} */
+
+.workspace-leaf-content[data-mode="preview"] .view-content .daily-note .inline-title {
+    display: none;
+}
+
+.daily-note .callout[data-callout="bannericonc"] .callout-content>p {
+    font-family: 'Josefin Sans', 'Inter';
+    font-weight: 700;
+    text-shadow: 
+        0px 4px 9px black,
+        0px 1px 3px black;
+    color: white;
+    z-index: 1;
+    /* top: -0.30em; */
+}
+
+.daily-note h1, .daily-note .cm-header-1, 
+.daily-note h2, .daily-note .cm-header-2, 
+.daily-note h3, .daily-note .cm-header-3 {
+    width: fit-content;
+    position: relative;
+    font-family: 'Bellota Text', 'Inter', sans-serif;
+
+    /* background: radial-gradient(circle at top right,#ffffff, #5b7734);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    
+    letter-spacing: 0.04em;
+
+}
+
+.daily-note .heading-collapse-indicator {
+    width: 100%;
+    z-index: 1;
+}
+
+.daily-note h1::after, 
+.daily-note h2::after,
+.daily-note h3::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0%;
+    background: white;
+    transition: all 0.3s;
+}
+
+.daily-note h1:hover::after, 
+.daily-note h2:hover::after,
+.daily-note h3:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.daily-note .contains-task-list {
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.daily-note .contains-task-list:hover {
+    box-shadow: 0 3px 20px rgba(0,0,0,0.2);
+}
+
+.daily-note .contains-task-list{
+    background: linear-gradient(var(--background-primary-alt), var(--background-secondary) 125%);
+    border-radius: 10px;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.is-mobile .daily-note .contains-task-list{
+    background: linear-gradient(var(--background-primary-alt), var(--background-secondary) 125%)
+}
+
+.daily-note .contains-task-list .contains-task-list {
+    background: initial;
+    backdrop-filter: initial;
+    background-color: initial;
+    border-radius: initial;
+    padding: initial;
+    transition: initial;
+    box-shadow: initial;
+    border: initial;
+}
+
+.daily-note .nav-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    position: relative;
+}
+
+.daily-note .nav-bar a {
+    text-decoration: none;
+    color: var(--text-normal);
+    display: flex;
+    align-items: center;
+}
+
+.daily-note .nav-button {
+    position: relative;
+}
+
+.daily-note .nav-bar .internal-link:hover {
+    text-decoration: none !important;
+    color: var(--text-normal) !important;
+}
+
+.daily-note .nav-button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 18px;
+    background: white;
+    transition: all 0.3s;
+    transform: scaleX(0);
+}
+
+.daily-note .nav-button.prev::after {
+    transform-origin: 100%;
+}
+
+.daily-note .nav-button.next::after {
+    transform-origin: 0%;
+}
+
+.daily-note .nav-button:hover::after {
+    transform: scaleX(1);
+}
+
+
+.daily-note .nav-bar h1::after {
+    position: initial;
+    width: initial;
+    height: initial;
+    bottom: initial;
+    background: initial;
+    transition: all 0.3s;
+}
+
+.daily-note .nav-bar h1::after {
+    width: initial;
+    left: 0;
+}
+
+.daily-note .nav-button.disabled {
+    pointer-events: none;
+}
+
+.daily-note .nav-button.disabled h1 {
+    color: var(--text-faint);
+}
+
+.daily-note .nav-button.disabled svg {
+    stroke: var(--text-faint);
+}
+
+/* .workspace-leaf-content[data-mode="preview"] .nav-bar {
+    top: -20px;
+} */
+/*
+If you want the task list boxes to fit to character length
+This will make the div behave like a table, shrinking to fit its children
+ */
+/* .daily-note .contains-task-list {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    display: table; 
+}
+
+.daily-note .contains-task-list .contains-task-list {
+    background-color: initial;
+    border-radius: initial;
+    padding: initial;
+} */
+
+/* Glassmorphism effect */
+/* .daily-note .contains-task-list {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+} */
